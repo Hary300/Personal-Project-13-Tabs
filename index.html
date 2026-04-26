@@ -9,26 +9,40 @@
   </head>
   <body>
     <div class="tabs">
-      <div class="btns">
-        <button data-tab="overview">Overview</button>
-        <button data-tab="feature">Feature</button>
-        <button data-tab="contact">Contact</button>
+      <div class="tabs-buttons">
+        <button class="active" data-tab="html">HTML</button>
+        <button data-tab="css">CSS</button>
+        <button data-tab="js">JavaSCript</button>
       </div>
 
-      <div class="content">
-        <p class="text" data-tab="overview">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-          Voluptatibus, obcaecati.
-        </p>
-        <p class="text" data-tab="feature">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias
-          accusamus hic accusantium sequi repellendus eligendi.
-        </p>
-        <p class="text" data-tab="contact">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
-          non enim sint molestiae optio veritatis autem voluptas laboriosam
-          excepturi nostrum!
-        </p>
+      <div class="tabs-content">
+        <div class="text active" data-tab="html">
+          <img src="./images/html.png" alt="html icon" />
+          <p>
+            <span class="html">HTML</span> (HyperText Markup Language) digunakan
+            untuk membuat kerangka utama halaman web sebelum ditambahkan gaya
+            dan interaksi. Dengan HTML, kamu bisa membuat elemen seperti
+            heading, paragraf, gambar, dan link.
+          </p>
+        </div>
+        <div class="text" data-tab="css">
+          <img src="./images/css.png" alt="css icon" />
+          <p>
+            <span class="css">CSS</span> (Cascading Style Sheets) digunakan
+            untuk mengatur tampilan halaman web. Dengan CSS, kamu bisa mengubah
+            warna, font, layout, dan membuat desain menjadi lebih menarik serta
+            responsif di berbagai perangkat.
+          </p>
+        </div>
+        <div class="text" data-tab="js">
+          <img src="./images/javascript.png" alt="js icon" />
+          <p>
+            <span class="js">JavaScript</span> adalah bahasa pemrograman yang
+            membuat website menjadi interaktif. Dengan JavaScript, kamu bisa
+            menangani event, mengubah konten secara dinamis, dan membuat fitur
+            seperti tabs, modal, dan animasi.
+          </p>
+        </div>
       </div>
       <!-- end -->
     </div>

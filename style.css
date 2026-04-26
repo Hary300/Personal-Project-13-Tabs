@@ -3,3 +3,83 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+img {
+  display: block;
+  max-width: 110px;
+}
+
+body {
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+}
+
+/* Tabs */
+.tabs {
+  padding: 15px 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 450px;
+}
+
+/* Tabs Button */
+.tabs .tabs-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.tabs .tabs-buttons button {
+  padding: 5px 15px;
+}
+
+.tabs .tabs-buttons button.active {
+  border-bottom: 2px solid aqua;
+}
+
+.tabs .tabs-buttons button {
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+/* Tabs content */
+.tabs-content .text {
+  font-size: 13px;
+  text-align: justify;
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  visibility: hidden;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.tabs-content .text p span {
+  font-weight: bold;
+  font-size: larger;
+}
+
+.tabs-content .text p .html {
+  color: #dc6e40;
+}
+
+.tabs-content .text p .css {
+  color: #4294e0;
+}
+
+.tabs-content .text p .js {
+  color: #e4b25d;
+}
+
+.tabs-content .text.active {
+  opacity: 1;
+  position: relative;
+  visibility: visible;
+}

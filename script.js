@@ -1,17 +1,17 @@
-const buttons = document.querySelectorAll('.tabs .btns button');
-const contents = document.querySelectorAll('.tabs .content .text');
+const buttons = document.querySelectorAll('.tabs .tabs-buttons button');
+const contents = document.querySelectorAll('.tabs .tabs-content .text');
 
-buttons.forEach((button) => {
-  button.addEventListener('click', function () {
-    buttons.forEach((button) => button.classList.remove('active'));
-    button.classList.add('active');
-    const dataTab = this.dataset.tab;
+buttons.forEach((btn) => {
+  btn.addEventListener('click', function () {
+    const target = this.dataset.tab;
+
+    // reset buttons → step-by-step (UI state utama)
+    buttons.forEach((b) => b.classList.remove('active'));
+    this.classList.add('active');
+
+    // reset contents → condition-based (mapping data)
     contents.forEach((content) => {
-      content.classList.remove('active');
-
-      if (content.dataset.tab === dataTab) {
-        content.classList.add('active');
-      }
+      content.classList.toggle('active', content.dataset.tab === target);
     });
   });
 });
